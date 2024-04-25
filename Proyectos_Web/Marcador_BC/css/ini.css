@@ -29,6 +29,11 @@ body {
     box-sizing: border-box;
 }
 
+.caja img{
+    width: 100%;
+    height: auto;
+}
+
 @media (max-width: 768px) {
     .contenedor {
         flex-direction: column;
