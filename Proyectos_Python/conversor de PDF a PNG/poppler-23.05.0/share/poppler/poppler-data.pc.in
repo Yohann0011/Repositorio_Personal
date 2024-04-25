@@ -1,0 +1,19 @@
+<<<<<<< HEAD
+poppler_datadir=@pkgdatadir@
+
+Name: poppler-data
+Description: Encoding files for use with poppler
+Version: @VERSION@
+
+Cflags: -DPOPPLER_DATADIR=@pkgdatadir@
+
+=======
+poppler_datadir=@pkgdatadir@
+
+Name: poppler-data
+Description: Encoding files for use with poppler
+Version: @VERSION@
+
+Cflags: -DPOPPLER_DATADIR=@pkgdatadir@
+
+>>>>>>> 8086880b55efd63f49e0728f2f4fa0b85da2c170
