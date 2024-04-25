@@ -1,0 +1,27 @@
+<<<<<<< HEAD
+prefix=D:/bld/poppler-split_1683554096968/_h_env/Library
+libdir=D:/bld/poppler-split_1683554096968/_h_env/Library/lib
+includedir=D:/bld/poppler-split_1683554096968/_h_env/Library/include
+
+Name: poppler-cpp
+Description: cpp backend for Poppler PDF rendering library
+Version: 23.05.0
+Requires: 
+Requires.private: poppler = 23.05.0
+
+Libs: -L${libdir} -lpoppler-cpp
+Cflags: -I${includedir}/poppler/cpp
+=======
+prefix=D:/bld/poppler-split_1683554096968/_h_env/Library
+libdir=D:/bld/poppler-split_1683554096968/_h_env/Library/lib
+includedir=D:/bld/poppler-split_1683554096968/_h_env/Library/include
+
+Name: poppler-cpp
+Description: cpp backend for Poppler PDF rendering library
+Version: 23.05.0
+Requires: 
+Requires.private: poppler = 23.05.0
+
+Libs: -L${libdir} -lpoppler-cpp
+Cflags: -I${includedir}/poppler/cpp
+>>>>>>> 8086880b55efd63f49e0728f2f4fa0b85da2c170
