@@ -1,0 +1,43 @@
+body {
+    user-select: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #beae9d;
+    height: 100vh;
+    margin: 0;
+    font-size: 8vw;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.contenedor {
+    width: 100px;
+    height: 100px;
+    margin: 0%;
+}
+
+.mitad {
+    color: rgb(210, 0, 0);
+    position: fixed;
+    top: 40%;
+    left: calc(50%);
+    margin: 0;
+    padding: 0;
+    width: auto; /* Ajustar el ancho según sea necesario */
+}
+
+.inicio {
+    position: fixed;
+    top: 40%;
+    right: calc(50%);
+    margin: 0px;
+    padding: 0px;
+}
+
+.fin {
+    position: fixed;
+    top: 40%;
+    left: calc(50% + var(--m2));
+    margin: 0px;
+    padding: 0px;
+}

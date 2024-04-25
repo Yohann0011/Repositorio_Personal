@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang = "es">
+<head>
+    <title>Web Prueba - Mack - Registro</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <!-- Inicio Encabezado -->
+    <header>
+        <!-- hypervinculo de registro -->
+        <div class="h1">
+            <a href="#registro" class="h1_1">REGÍSTRATE</a>
+        </div>
+        <!-- Redes Sociales -->
+        <div class="h2"> 
+            <!-- Enlaces e Imágenes -->
+            <a href="https://facebook.com/miempresa" target="_blank"><img src="Img/FB.png" alt="Facebook"></a>
+            <a href="https://instagram.com/miempresa" target="_blank"><img src="Img/IG.png" alt="Instagram"></a>
+            <a href="https://youtube.com/miempresa" target="_blank"><img src="Img/YT.png" alt="Youtube"></a>
+        </div> 
+    </header> 
+    <!-- Fin Encabezado -->
+
+<!-- Estructura de la pagina -->
+<main>
+    <!-- Inicio Seccion 1 -->
+    <div class="s1">  
+        <!-- Imagen de fondo -->
+        <div class="f">
+            <img class="f1" src="Img/12-296181022_484704213661945_4403828916892294163_n 1.jpg">
+        </div>
+
+        <!-- Inicio Cajon 1 -->
+        <div class="c1">
+            <!-- Primer contenedor (Texto e img) -->
+            <div class="c1_1">
+                <img class="c1_1_img1" src="Img/desig1.png"><br><br>
+                Este año estamos rindiendo tributo a nuestra marca 
+                <strong>Marck la cual lleva 100 años rodando por las carreteras de Colombia </strong> 
+                y queremos hacerte parte de esta celebración.<br><br>
+                Si eres dueño de un camión Mack <strong>¡YA GANASTE!, SOLO REGÍSTRATE Y RECLAMA
+                TUS PREMIOS.</strong>
+            </div>
+            
+            <!-- Segundo contenedor (Imagen gorra) -->
+            <div class="c1_2">
+                <img src="Img/gorra-sin-fondo 1.png" class="img1_c1_2">
+            </div>
+        </div>
+        <!-- Fin Cajon 1 -->
+    </div>
+    <!-- Fin Seccion 1 -->
+
+
+    <!-- Inicio Seccion 2 -->
+    <section id="seccion2">
+
+        <!-- Inicio Cajon 2 -->
+        <div class="c2">
+            <div class="c2_1">
+                <h1>REGÍSTRATE Y GANA</h1>
+                Los datos registrados deben pertenecer a la persona que figura en la tarjeta de propiedad del vehículo MACK;<br>
+                si una persona tiene más de un (1) camión MACK a su nombre sólo se puede inscribir una vez.
+            </div>
+        </div>
+        <!-- Fin Cajon 2 -->
+
+        <!-- Inicio Cajon 3 -->
+        <div class="c3">
+            <!-- Primer contenedor (Texto e img) -->
+            <div class="c3_1">
+                <img class="c3_1_img1" src="Img/Alert-1.png">
+                <!--LOS <strong>PRIMEROS 100</strong> INSCRITOS<br>
+                SERÁN <strong>GANADORES</strong> DE-->
+                <div class="c3_1_1">
+                    <div class="c3_1t">
+                        <img class="c3_1_v" src="Img/gift.png">
+                        <div>
+                            *Una gorra emblemática Mack.
+                        </div>
+                    </div>
+                    
+                    <div class="c3_1t">
+                        <img class="c3_1_v" src="Img/promo.png">
+                        <div><strong>**25% de descuento en repuestos instalados</strong> en taller eI
+                        día que reclames tu premio o <strong>15% de descuento en
+                        repuestos</strong> comprados por mostrador el día que reclames tu
+                        premio.
+                        </div>
+                    </div>
+                    <div class="c3_1t">
+                        <img class="c3_1_v" src="Img/id.png">
+                        ***Una tarjeta de miembro Jauría Mack para acceder a descuentos especiales. (Aplica para el año 2023)
+                    </div>
+                </div>
+                <img class="c3_1_img2" src="Img/Group.png">
+                <div class="c3_1t2">
+                    <strong>Válido solo para Colombia</strong><br>
+                    Los premios no aplican para convenios de flotas
+                </div>
+            </div>
+            
+            
+            <!-- Segundo contenedor (Formulario) -->
+            <div class="c3_2">
+                <form>
+                    <div class="c3_2l">
+                        <label><strong>Nombres *</strong></label>
+                        <label><strong>Apellidos *</strong></label>
+                    </div>
+                    <div class="c3_2i">
+                        <input type="text" id="nombre" required class="c3in1">
+                        <input type="text" id="apellido"required>
+                    </div>
+                    <div class="c3_2l">
+                        <label for="phone"><strong>Número de Celular *</strong></label>
+                        <label for="id"><strong>Cédula *</strong></label>
+                    </div>
+                    <div class="c3_2i">
+                        <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required class="c3in1">
+                        <input type="text" id="id" name="id" pattern="[0-9]{8}" required>
+                    </div>
+                    <label class="c3_2l"><strong>Correo Electrónico *</strong></label>
+                    <input type="email" id="email" required class="c3_2l">
+                    <label class="c3_2l"><strong>Placa del Camión *</strong></label>
+                    <input type="text" id="placa" pattern="[A-Z]{3}-[0-9]{4}" required class="c3_2l">
+                    <label class="c3_2l"><strong>¿En que taller deseas reclamar u premio? *</strong></label>
+                    <select id="taller" required class="c3_2l1">
+                        <option value=""></option>
+                        <option value="workshop1">opc 1</option>
+                        <option value="workshop2">opc 2</option>
+                        <option value="workshop3">opc 3</option>
+                    </select>
+            
+                    <label class="c3_2l1">
+                        <strong>Autorización para eI uso y tratamiento de datos e información personal</strong>
+                    </label>
+                    <div>
+                        <textarea readonly class="c3_2l">Declaro que he sido informado por el grupo empresarial compuesto por las sociedades Praco Didacol S.A.S, Distribuidora Hino de Colombia S.A.S, Inmobiliaria Inchcape Colombia S.A.S y Matrase S.A.S,; en adelante Las Compañías, que serán el Responsable del Tratamiento de mis Datos Personales, por 10 que autorizo de manera previa,
+                        </textarea>
+                    </div>
+                    <div class="c3tyc">
+                        <div class="ace">
+                            <input type="radio" id="tycA" class="radio" name="tyc">
+                        </div>
+                        <div class="acepto">
+                            <label>Acepto</label>
+                        </div>
+                        <div class="noace">
+                            <input type="radio" id="tycN" class="radio" name="tyc">
+                        </div>
+                        <div>
+                            <label>No acepto</label>
+                        </div>
+                    </div>
+            
+                    <button type="submit">ENVIAR</button>
+                </form>
+            </div>
+        </div>
+        <!-- Fin Cajon 3 -->
+        
+    </section>
+    <!-- Fin Seccion 2 -->
+    
+    <!-- Inicio Seccion 3 -->
+        <!-- Inicio Cajon 4 -->
+        <div class="c4">
+            <div class="c4_1">
+                Inscripciones abiertas del jueves 9 de marzo del 2023 al martes 9 de mayo del 2023 o hasta que se inscriban 100 personas, lo primero que ocurra. Para ser un ganador la persona debe 1). Ser dueño de un camión MACK. 2). Inscribirse en el formulario de la página www.soyjauriamack.com, y diligenciar la totalidad de los datos, los cuales deben ser los mismos de la tarjeta de propiedad del camión MACK, si la persona que diligencia el formulario no es la misma que figura como propietario del camión MACK entonces debe diligenciar los datos del propietario 3). Presentar al momento de reclamar el premio, la tarjeta de propiedad del camión. Si una persona es dueño de más de un camión MACK, sólo se puede inscribir una vez. El ganador dueño del camión MACK debe ser la persona que reclame el premio. El ganador tiene hasta el 31 de mayo para reclamar su premio (gorra MACK+tarjeta de miembro+ 15% o 25% de descuento) en el taller de Inchcape Colombia S.A.S (antes PracoDidacol) seleccionado. Esta campaña aplica únicamente para los siguientes talleres de Inchcape Colombia S.A.S (antes PracoDidacol) a nivel nacional: BOGOTÁ: FONTIBÓN Diagonal 16 Cra 96i - 15 Tel: (1) 3808959, SIBERIA - COTA: Calle 80 Autopista Medellin, Km 1.2 vía Siberia costado Sur Tel: (1) 3808920, ANTIOQUIA - ITAGÜÍ: Cra 42 No. 46-130 Autopista Sur Tel: (4) 2040210, CALI-YUMBO: Sede Norte Cra. 36 No.15-95 Acopi-Yumbo Tel: (2) 3692100, BUCARAMANGA: Calle 70 # 32W-92 Km 4 Vía Girón, Tel: (7) 6910200, BARRANQUILLA: Parque Logístico BAQ: Calle 110 (Avenida Circunvalar) # 9G-600- Bodega2, Tel: (605) 3160300.  *La gorra emblemática Mack corresponde a una gorra gris referencia M3391, 100% algodón, logotipo de MACK en 3D, cierre a presión - ajustable; este artículo es mercancía con licencia oficial de Mack Trucks, Inc, país de origen: EEUU. El participante debe seleccionar el taller de Inchcape Colombia S.A.S (antes PracoDidacol) donde desea reclamar su gorra y sólo podrá reclamarla en el punto seleccionado (no se harán envíos de premios). **El 15% de descuento en repuestos MACK es válido del 9 de marzo hasta el 31 de mayo del 2023 o hasta agotar unides existentes, lo primero que ocurra. El 15% de descuento en repuestos MACK aplica únicamente para repuestos comprados por mostrador el día que el ganador reclame su premio (Gorra + Tarjeta de miembro) en el taller seleccionado. El 25% de descuento es válido del 9 de marzo hasta el 31 de mayo del 2023 o hasta agotar unides existentes, lo primero que ocurra. El 25% de descuento aplica sólo para repuestos MACK instalados en taller el día que el ganador reclame su premio (gorra MACK + tarjeta) en el taller seleccionado. ***La TARJETA DE MIEMBRO JAURÍA MACK válida del 1 de febrero hasta el 30 de diciembre del 2023 o hasta agotar existencias, lo que primero ocurra, es una tarjeta que le permitirá al ganador acceder a descuentos exclusivos durante el año 2023, los cuales serán comunicados por medio de los canales oficiales de Inchcape Colombia S.A.S (antes Praco Didacol). El participante debe seleccionar el taller de Inchcape Colombia S.A.S (antes PracoDidacol) donde desea reclamar su tarjeta y sólo podrá reclamarla en el punto seleccionado (no se harán envíos de premios). El ganador que se inscriba sólo puede acceder a los descuentos el mismo día que reclame la gorra + tarjeta de miembro en el taller de Inchcape Colombia S.A.S (antes PracoDidacol) previamente seleccionado, los descuentos únicamente se otorgarán en facturas realizadas a nombre del propietario registrado de la tarjeta (tarjeta de miembro). Cualquier pago o transferencia deberá realizarse única y exclusivamente a las cuentas bancarias de Inchcape Colombia S.A.S (antes PRACO DIDACOL S.A.S), Identificadas con el NIT 860.047.657-1. Absténgase de realizar pagos a cuentas no autorizadas o que no sean de propiedad de Inchcape Colombia S.A.S (antes PRACO DIDACOL S.A.S). Cualquier irregularidad por favor no dude en reportarla haciendo uso de los mecanismos institucionales. Tras el cierre de publicación, pueden haberse producido cambios en el precio que sugerimos verificar con su asesor de preferencia al momento de realizar el cambio de aceite. Esta oferta, no es acumulable, canjeable ni transferible con otras ofertas y/o promociones de la marca. Esta campaña NO aplica para convenios de flotas.
+            </div>
+            <!-- Redes Sociales -->
+            <div class="c4_2"> 
+                <!-- Enlaces e Imágenes -->
+                <a href="https://facebook.com/miempresa" target="_blank"><img src="Img/FB-B.png" alt="Facebook"></a>
+                <a href="https://instagram.com/miempresa" target="_blank"><img src="Img/IG-B.png" alt="Instagram"></a>
+                <a href="https://youtube.com/miempresa" target="_blank"><img src="Img/YT-B.png" alt="Youtube"></a>
+            </div> 
+        </div>
+        <!-- Fin Cajon 4 -->
+    <!-- Fin Seccion 3 -->
+</main>
+</body>
+</html>
