@@ -1,0 +1,45 @@
+.contenedor-g{
+  width: 100%;
+  height: auto;
+  margin: 0%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.contenedor-1 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: beige;
+}
+
+.caja {
+  flex: 1;
+  background-color: #f0f0f0;
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.caja-interna {
+  margin-bottom: 10px;
+  background-color: #ccc;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.caja-interna .boton {
+  margin-right: 10px;
+}
+input{
+  text-align: center;
+  background-color: transparent;
+  border-style: hidden;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}

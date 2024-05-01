@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compra</title>
+    <style>
+        /* Estilos básicos para hacer la página responsiva */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        header, footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            margin: 20px auto;
+            max-width: 800px;
+            overflow: hidden;
+        }
+        .inner-container {
+            flex: 1;
+            border: 1px solid #ccc;
+            padding: 20px;
+        }
+        .box {
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Encabezado</h1>
+    </header>
+    
+    <div class="container">
+        <div class="inner-container">
+            <h2>BOLETOS PREMIO UNO</h2>
+            <input type="number" id="bol1" disabled hidden>
+            <div id="box-container-1">
+                <!-- Las cajas se generan aquí -->
+            </div>
+        </div>
+        <div class="inner-container">
+            <h2>BOLETOS PREMIO DOS</h2>
+            <input type="number" id="bol2" disabled hidden>
+            <div id="box-container-2">
+                <!-- Las cajas se generan aquí -->
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Pie de Página</p>
+    </footer>
+
+    <script>
+        function generateBoxes(containerId, count) {
+            var container = document.getElementById(containerId);
+            container.innerHTML = ''; // Limpiar el contenido existente
+            
+            for (var i = 0; i < count; i++) {
+                var randomNumber = Math.floor(Math.random() * 1000000); // Generar número aleatorio entre 0 y 999999
+                var formattedNumber = randomNumber.toString().padStart(6, '0'); // Formato 000000
+                var box = document.createElement('div');
+                box.classList.add('box');
+                box.textContent = formattedNumber;
+                container.appendChild(box);
+            }
+        }
+
+        // Obtener los valores de los campos de entrada de localStorage y generar las cajas
+        window.onload = function() {
+            var bol1 = localStorage.getItem('bol1');
+            var bol2 = localStorage.getItem('bol2');
+            document.getElementById('bol1').value = bol1;
+            document.getElementById('bol2').value = bol2;
+            generateBoxes('box-container-1', bol1);
+            generateBoxes('box-container-2', bol2);
+        };
+    </script>
+</body>
+</html>

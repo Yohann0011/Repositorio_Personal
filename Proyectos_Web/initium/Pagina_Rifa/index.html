@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejemplo Flexbox con Botones</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <div class="contenedor-g">
+    <div class="contenedor-1">
+
+      <div class="caja">
+        <div class="caja-interna">Contenido caja 1 - 1</div>
+        <div class="caja-interna">
+          <button class="boton" id="max1">+</button>
+          <input type="number" value="1" id="bol1">
+          <button class="boton" id="min1">-</button>
+        </div>
+      </div>
+
+      <div class="caja">
+        <div class="caja-interna">Contenido caja 2 - 1</div>
+        <div class="caja-interna">
+          <button class="boton" id="max2">+</button>
+          <input type="number" value="1" id="bol2">
+          <button class="boton" id="min2">-</button>
+        </div>
+      </div>
+
+    </div>
+   
+    <div class="caja">
+      <a href="compra.html">
+      <input type="submit" value="comprar" onclick="guardarYComprar()">
+      </a>
+    </div>
+
+
+  </div>
+  <script src="logica.js"></script>
+</body>
+</html>
