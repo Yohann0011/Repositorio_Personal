@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Marcador</title>
+    <link rel="stylesheet" type="text/css" href="css/estilo.css">
+</head>
+<body>
+    <div class="TamaP"></div>
+    <div class="container">
+        <div class="countA-box">
+            <div id="A-counter" class="counter">0</div>
+        </div>
+        <div id="Aset-counter" class="setA-box">0</div>
+        <div id="Bset-counter" class="setB-box">0</div>
+        <div class="countB-box">
+            <div id="B-counter" class="counter">0</div>
+        </div>
+        <div id="qr "class="qr">
+            <img src="img/qr.png" alt="qr">
+        </div>
+    </div>
+    <script>
+        // Función para obtener los valores de los contadores del servidor y actualizar la interfaz
+        function actualizarContadores() {
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET", "php/obtC.php", true);
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    var data = JSON.parse(xhr.responseText);
+                    if(data.espejo == 0){
+                    document.getElementById("A-counter").innerText = data.contadorA;
+                    document.getElementById("Aset-counter").innerText = data.setA;
+                    document.getElementById("B-counter").innerText = data.contadorB;
+                    document.getElementById("Bset-counter").innerText = data.setB;
+
+                    document.getElementsByClassName("countA-box")[0].style.backgroundColor = "blue";
+                    document.getElementsByClassName("countB-box")[0].style.backgroundColor = "red";
+                    document.getElementsByClassName("setA-box")[0].style.backgroundColor = "darkblue";
+                    document.getElementsByClassName("setB-box")[0].style.backgroundColor = "darkred";
+
+                    // Aplicar estilo de centrado
+                    if (data.contadorA > 19) {
+                        document.getElementById("A-counter").classList.add("over-ten");
+                        document.getElementById("A-counter").classList.remove("over-nine");
+                    } else {
+                    if(data.contadorA > 9) {
+                        document.getElementById("A-counter").classList.add("over-nine");
+                        document.getElementById("A-counter").classList.remove("over-ten");
+                    } else {
+                        document.getElementById("A-counter").classList.remove("over-nine");
+                        document.getElementById("A-counter").classList.remove("over-ten");
+                        }
+                    }
+
+                    if (data.contadorB > 19) {
+                        document.getElementById("B-counter").classList.add("over-ten");
+                        document.getElementById("B-counter").classList.remove("over-nine");
+                    } else {
+                    if(data.contadorB > 9) {
+                        document.getElementById("B-counter").classList.add("over-nine");
+                        document.getElementById("B-counter").classList.remove("over-ten");
+                    } else {
+                        document.getElementById("B-counter").classList.remove("over-nine");
+                        document.getElementById("B-counter").classList.remove("over-ten");
+                        }
+                    }
+
+                    }else{
+
+                    document.getElementById("A-counter").innerText = data.contadorB;
+                    document.getElementById("Aset-counter").innerText = data.setB;
+                    document.getElementById("B-counter").innerText = data.contadorA;
+                    document.getElementById("Bset-counter").innerText = data.setA;
+                    
+                    document.getElementsByClassName("countA-box")[0].style.backgroundColor = "red";
+                    document.getElementsByClassName("countB-box")[0].style.backgroundColor = "blue";
+                    document.getElementsByClassName("setA-box")[0].style.backgroundColor = "darkred";
+                    document.getElementsByClassName("setB-box")[0].style.backgroundColor = "darkblue";
+                    
+                    
+
+                    // Aplicar estilo de centrado
+                    if (data.contadorB > 19) {
+                        document.getElementById("A-counter").classList.add("over-ten");
+                        document.getElementById("A-counter").classList.remove("over-nine");
+                    } else {
+                    if(data.contadorB > 9) {
+                        document.getElementById("A-counter").classList.add("over-nine");
+                        document.getElementById("A-counter").classList.remove("over-ten");
+                    } else {
+                        document.getElementById("A-counter").classList.remove("over-nine");
+                        document.getElementById("A-counter").classList.remove("over-ten");
+                        }
+                    }
+
+                    if (data.contadorA > 19) {
+                        document.getElementById("B-counter").classList.add("over-ten");
+                        document.getElementById("B-counter").classList.remove("over-nine");
+                    } else {
+                    if(data.contadorA > 9) {
+                        document.getElementById("B-counter").classList.add("over-nine");
+                        document.getElementById("B-counter").classList.remove("over-ten");
+                    } else {
+                        document.getElementById("B-counter").classList.remove("over-nine");
+                        document.getElementById("B-counter").classList.remove("over-ten");
+                        }
+                    }
+                    
+                    }
+                
+                }
+            };
+            xhr.send();
+        }
+        
+
+        // Actualizar los contadores cada segundo
+        setInterval(actualizarContadores, 100);
+
+        // Llamar a la función una vez para mostrar los valores al cargar la página
+        actualizarContadores();
+    </script>
+</body>
+</html>

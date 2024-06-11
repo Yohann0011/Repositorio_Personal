@@ -1,0 +1,139 @@
+body {
+    user-select: none;
+    background-color: #424242; 
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.container {
+    width: 100%;
+}
+
+.countA-box {
+    width: calc((var(--screenWidth) * 0.4));
+    height: calc((var(--screenWidth) * 0.4));
+    background-color: blue;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+
+.countB-box {
+    width: calc((var(--screenWidth) * 0.4));
+    height: calc((var(--screenWidth) * 0.4));
+    background-color: red;
+    position: absolute;
+    left: 60%;
+    top: 0px;
+}
+
+.setA-box {
+    width: calc((var(--screenWidth) * 0.1));
+    height: calc((var(--screenWidth) * 0.1));
+    background-color: darkblue;
+    position: absolute;
+    left: calc((var(--screenWidth) * 0.4));
+    color: white; 
+    font-size: calc(var(--screenWidth) * 0.1); /* Ajusta el tamaño de fuente según el ancho de la pantalla */
+    font-weight: bold;
+    text-align: center;
+    top: 0px;
+}
+
+.setB-box {
+    width: calc((var(--screenWidth) * 0.1));
+    height: calc((var(--screenWidth) * 0.1));
+    background-color: darkred;
+    position: absolute;
+    left: calc((var(--screenWidth) * 0.5));
+    color: white; 
+    font-size: calc(var(--screenWidth) * 0.1); /* Ajusta el tamaño de fuente según el ancho de la pantalla */
+    font-weight: bold;
+    text-align: center;
+    top: 0px;
+}
+
+.timeA1-box {
+    width: calc((var(--screenWidth) * 0.4));
+    height: calc((var(--screenWidth) * 0.05));
+    background-color: darkblue;
+    position: absolute;
+    top: calc((var(--screenWidth) * 0.4));
+    left: 0px;
+    color: white; 
+    font-size: calc(4vW); /* Ajusta el tamaño de fuente según el ancho de la pantalla */
+    font-weight: bold;
+    text-align: center;
+}
+
+.countmin1-box {
+    width: calc((var(--screenWidth) * 0.2));
+    height: calc((var(--screenWidth) * 0.05));
+    background-color: darkblue;
+    position: absolute;
+    left: 0px;
+    top: calc((var(--screenWidth) * 0.4));
+    color: white; 
+    font-size: calc(5vW); /* Ajusta el tamaño de fuente según el ancho de la pantalla */
+    font-weight: bold;
+    text-align: center;
+}
+
+.timeA2-box {
+    width: calc((var(--screenWidth) * 0.4));
+    height: calc((var(--screenWidth) * 0.05));
+    background-color: darkred;
+    position: absolute;
+    top: calc((var(--screenWidth) * 0.4));
+    left: calc((var(--screenWidth) * 0.6));
+    color: white; 
+    font-size: calc(4vW); /* Ajusta el tamaño de fuente según el ancho de la pantalla */
+    font-weight: bold;
+    text-align: center;
+}
+
+.countmin2-box {
+    width: calc((var(--screenWidth) * 0.2));
+    height: calc((var(--screenWidth) * 0.05));
+    background-color: darkred;
+    position: absolute;
+    top: calc((var(--screenWidth) * 0.4));
+    right: 0px;
+    color: white; 
+    font-size: calc(5vW); /* Ajusta el tamaño de fuente según el ancho de la pantalla */
+    font-weight: bold;
+    text-align: center;
+}
+
+#ABox-Counter .counter {
+    position: absolute;
+    color: white;
+    font-size: calc(30vw); /* Ajusta el tamaño de fuente según el ancho de la pantalla */
+    font-weight: bold;
+    line-height: calc((var(--screenWidth) * 0.4));
+    margin-left: calc((var(--screenWidth) * 0.1));
+}
+
+#BBox-Counter .counter {
+    position: absolute;
+    color: white;
+    font-size: calc(30vw); /* Ajusta el tamaño de fuente según el ancho de la pantalla */
+    font-weight: bold;
+    line-height: calc((var(--screenWidth) * 0.4));
+    margin-left: calc((var(--screenWidth) * 0.1));
+}
+
+#ABox-Counter .counter.over-nine {
+    margin-left: calc((var(--screenWidth) * 0.02));
+}
+
+#BBox-Counter .counter.over-nine {
+    margin-left: calc((var(--screenWidth) * 0.02));
+}
+
+.qr img {
+    position: absolute;
+    width: 20%;
+    height: auto;
+    top: calc((var(--screenWidth) * 0.1));
+    left: calc((var(--screenWidth) * 0.4));
+}
