@@ -1,0 +1,115 @@
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(30, 30, 30, 1);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: medium;
+}
+
+/* Inicio Elemento Header */
+#main-header {
+  background: #303030;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1em;
+  height: 12vh;
+}
+
+#main-header a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Logo */
+#logo-header {
+  display: flex;
+  align-items: center;
+}
+
+#logo-header img {
+  display: block;
+  width: auto;
+  max-height: 10vh;
+}
+
+/* Navegación */
+ul, ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+nav ul {
+  display: flex;
+  gap: 1em;
+}
+
+nav ul li {
+  display: inline-block;
+}
+
+nav ul li a {
+  text-decoration: none;
+  padding: 0.5em 1em;
+}
+
+nav ul li a:hover {
+  background: rgba(30, 30, 30, 1);
+}
+
+/* Botón de menú para móviles */
+#menu-toggle {
+  display: none;
+}
+
+.menu-icon {
+  display: none;
+  font-size: 2em;
+  cursor: pointer;
+}
+
+/* Media Queries para diseño responsivo */
+@media (max-width: 768px) {
+  #main-header {
+    flex-direction: column;
+    height: auto;
+    padding: 1em;
+  }
+
+  #logo-header {
+    margin-bottom: 1em;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 0.5em;
+    display: none; /* Escondemos el menú inicialmente */
+  }
+
+  #menu-toggle:checked + .menu-icon + nav ul {
+    display: flex; /* Mostramos el menú cuando se marca el checkbox */
+  }
+
+  nav ul li {
+    display: block;
+  }
+
+  nav ul li a {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+}

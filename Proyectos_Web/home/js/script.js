@@ -84,7 +84,7 @@ setInterval(actualizarContadores, 100);
 actualizarContadores();
 
 // Calcular el ancho y alto de la pantalla
-var screenWidth = window.innerWidth; // Obtén el ancho de la pantalla
-var screenHeight = window.innerHeight; // Obtén el alto de la pantalla
-document.body.style.setProperty('--screenWidth', screenWidth + 'px'); // Establece el valor de la variable --screenWidth
-document.body.style.setProperty('--screenHeight', screenHeight + 'px'); // Establece el valor de la variable --screenHeight
+var anchoPantalla = window.innerWidth; // Obtén el ancho de la pantalla
+var altoPantalla = window.innerHeight; // Obtén el alto de la pantalla
+document.body.style.setProperty('--screenWidth', anchoPantalla + 'px'); // Establece el valor de la variable --screenWidth
+document.body.style.setProperty('--screenHeight', altoPantalla + 'px'); // Establece el valor de la variable --screenHeight
