@@ -2,16 +2,16 @@
 * Inicio Elemento Carrusel *
 */
 .slider {
-    width: auto;
+    width: 100;
     height: fit-content;
     display: flex;
     overflow: hidden;
-    border-style: dotted;
     position: relative;
+    margin-top: 10vh;
 }
 
 .slider img {
-    max-height: 40vh;
+    max-height: 50vh;
     width: auto;
     object-fit: cover;
 }
@@ -24,7 +24,7 @@
 .slides {
     display: flex;
     width: calc(100%*16);
-    animation: slide 80s linear infinite;
+    animation: slide 50s linear infinite;
 }
 
 .slides img {
@@ -35,7 +35,7 @@
 */
 
 .contenedor {
-  width: 100%;
+  width: 100;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -55,6 +55,22 @@
       margin-bottom: 10px;  /* Añade margen entre elementos */
       width: 100%;  /* Opcional: hacer que los hijos ocupen el 100% del ancho del contenedor */
   }
+
+  .slider {
+    margin-top: 8vh;
+  }
+
+  .slider img {
+    max-height: 40vh;
+    width: auto;
+    object-fit: cover;
+}
+
+  .slides {
+    display: flex;
+    width: calc(100%*16);
+    animation: slide 60s linear infinite;
+}
 }
 
 .caja {
