@@ -36,11 +36,84 @@
 
 .contenedor {
   width: 100;
+  height: auto;
   display: flex;
-  justify-content: space-evenly;
+  flex-direction: row;
   align-items: center;
-  padding: 20px;
   background-color: transparent;
+}
+
+
+.caja {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-grow: 1;
+  height: auto;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 20px;
+  border-style: solid;
+  text-decoration: none;
+}
+
+.caja img{
+  max-height: 8vh;
+  max-width: auto;
+}
+
+.caja span{
+  font-weight: bold;
+  margin: 15px;
+  font-size: 150%;
+}
+
+/* Fixed/sticky icon bar (vertically aligned 50% from the top of the screen) */
+.icon-bar {
+  position: fixed;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+/* Style the icon bar links */
+.icon-bar a {
+  display: block;
+  text-align: center;
+  padding: 10px;
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 3vh;
+}
+
+/* Style the social media icons with color, if you want */
+.icon-bar a:hover {
+  background-color: #000;
+  background: linear-gradient(to top,rgba(0,0,0,1),rgba(0,0,0,1));
+}
+
+.instagram {
+  background: linear-gradient(to top, rgba(254, 212, 46,1), rgba(254, 121, 34,1),rgba(251, 18, 106,1),rgba(207, 28, 193,1),rgba(117, 66, 245,1));
+  color: white;
+}
+
+.facebook {
+  background: linear-gradient(to top, rgba(10, 100, 225,1), rgba(23, 175, 251,1));
+  color: white;
+}
+
+
+.tiktok {
+  background: linear-gradient(to top,rgba(254, 47, 93,1),rgba(49, 241, 235,1));
+  color: white;
+}
+
+.youtube {
+  background: #bb0000;
+  color: white;
 }
 
 /* Media query para pantallas pequeñas (móviles en modo retrato) */
@@ -48,12 +121,22 @@
   .contenedor {
       flex-direction: column;  /* Cambia a diseño vertical */
       justify-content: center;  /* Centra los elementos verticalmente */
-      padding: 10px;  /* Reduce el padding para dispositivos pequeños */
   }
 
-  .contenedor > * {
-      margin-bottom: 10px;  /* Añade margen entre elementos */
-      width: 100%;  /* Opcional: hacer que los hijos ocupen el 100% del ancho del contenedor */
+  .caja {
+    width: 96%;
+    padding: 5px;
+  }
+  
+  .caja img{
+    max-height: 8vh;
+    max-width: 8vh;
+  }
+  
+  .caja span{
+    font-weight: bold;
+    margin: 15px;
+    font-size: 150%;
   }
 
   .slider {
@@ -72,63 +155,3 @@
     animation: slide 60s linear infinite;
 }
 }
-
-.caja {
-    width: auto;
-    height: auto;
-    color: white;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 20px;
-    border-style:dotted;
-}
-
-.caja img{
-    max-height: 20vh;
-    max-width: 20vh;
-}
-
-/* Fixed/sticky icon bar (vertically aligned 50% from the top of the screen) */
-.icon-bar {
-    position: fixed;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-  }
-  
-  /* Style the icon bar links */
-  .icon-bar a {
-    display: block;
-    text-align: center;
-    padding: 10px;
-    transition: all 0.3s ease;
-    color: white;
-    font-size: 3vh;
-  }
-  
-  /* Style the social media icons with color, if you want */
-  .icon-bar a:hover {
-    background-color: #000;
-    background: linear-gradient(to top,rgba(0,0,0,1),rgba(0,0,0,1));
-  }
-  
-  .instagram {
-    background: linear-gradient(to top, rgba(254, 212, 46,1), rgba(254, 121, 34,1),rgba(251, 18, 106,1),rgba(207, 28, 193,1),rgba(117, 66, 245,1));
-    color: white;
-  }
-
-  .facebook {
-    background: linear-gradient(to top, rgba(10, 100, 225,1), rgba(23, 175, 251,1));
-    color: white;
-  }
-  
-  
-  .tiktok {
-    background: linear-gradient(to top,rgba(254, 47, 93,1),rgba(49, 241, 235,1));
-    color: white;
-  }
-  
-  .youtube {
-    background: #bb0000;
-    color: white;
-  }
