@@ -1,0 +1,288 @@
+body {
+    user-select: none;
+    background-color: #303030; 
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.container {
+    width: 100%;
+}
+
+.countA-box {
+    width: calc((var(--Apantalla) * 0.4));
+    height: calc((var(--Apantalla) * 0.4));
+    background-color: blue;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+
+.countB-box {
+    width: calc((var(--Apantalla) * 0.4));
+    height: calc((var(--Apantalla) * 0.4));
+    background-color: red;
+    position: absolute;
+    left: 60%;
+    top: 0px;
+}
+
+.setA-box {
+    width: calc((var(--Apantalla) * 0.1));
+    height: calc((var(--Apantalla) * 0.1));
+    background-color: darkblue;
+    position: absolute;
+    left: calc((var(--Apantalla) * 0.4));
+    color: white; 
+    font-size: calc(var(--Apantalla) * 0.1); /* Ajusta el tamaño de fuente según el ancho de la pantalla */
+    font-weight: bold;
+    text-align: center;
+    top: 0px;
+}
+
+.setB-box {
+    width: calc((var(--Apantalla) * 0.1));
+    height: calc((var(--Apantalla) * 0.1));
+    background-color: darkred;
+    position: absolute;
+    left: calc((var(--Apantalla) * 0.5));
+    color: white; 
+    font-size: calc(var(--Apantalla) * 0.1); /* Ajusta el tamaño de fuente según el ancho de la pantalla */
+    font-weight: bold;
+    text-align: center;
+    top: 0px;
+}
+
+.timeA1-box {
+    width: calc((var(--Apantalla) * 0.2));
+    height: calc((var(--Apantalla) * 0.05));
+    background-color: darkblue;
+    position: absolute;
+    top: calc((var(--Apantalla) * 0.4));
+    left: calc((var(--Apantalla) * 0.2));
+    color: white; 
+    font-size: calc(3vw); /* Ajusta el tamaño de fuente según el ancho de la pantalla */
+    font-weight: bold;
+    line-height: calc((var(--Apantalla) * 0.053));
+    text-align: center;
+}
+
+.countmin1-box {
+    width: calc((var(--Apantalla) * 0.2));
+    height: calc((var(--Apantalla) * 0.05));
+    background-color: darkblue;
+    position: absolute;
+    left: 0px;
+    top: calc((var(--Apantalla) * 0.4));
+    color: white; 
+    font-size: calc(10vW); /* Ajusta el tamaño de fuente según el ancho de la pantalla */
+    font-weight: bold;
+    line-height: calc((var(--Apantalla) * 0.055));
+    text-align: center;
+}
+
+.timeA2-box {
+    width: calc((var(--Apantalla) * 0.2));
+    height: calc((var(--Apantalla) * 0.05));
+    background-color: darkred;
+    position: absolute;
+    top: calc((var(--Apantalla) * 0.4));
+    left: calc((var(--Apantalla) * 0.6));
+    color: white; 
+    font-size: calc(3vW); /* Ajusta el tamaño de fuente según el ancho de la pantalla */
+    font-weight: bold;
+    line-height: calc((var(--Apantalla) * 0.053));
+    text-align: center;
+}
+
+.countmin2-box {
+    width: calc((var(--Apantalla) * 0.2));
+    height: calc((var(--Apantalla) * 0.05));
+    background-color: darkred;
+    position: absolute;
+    top: calc((var(--Apantalla) * 0.4));
+    right: 0px;
+    color: white; 
+    font-size: calc(10vW); /* Ajusta el tamaño de fuente según el ancho de la pantalla */
+    font-weight: bold;
+    line-height: calc((var(--Apantalla) * 0.055));
+    text-align: center;
+}
+
+.re {
+  width: calc((var(--Apantalla) * 0.1));
+  height: calc((var(--Apantalla) * 0.08));
+  position: absolute;
+  top: calc((var(--Apantalla) * 0.12));
+  left: calc((var(--Apantalla) * 0.45));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#reiniciar img {
+  width: auto;
+  height: 100%;
+}
+
+.cambio {
+    width: calc((var(--Apantalla) * 0.1));
+    height: calc((var(--Apantalla) * 0.09));
+    position: absolute;
+    top: calc((var(--Apantalla) * 0.2));
+    left: calc((var(--Apantalla) * 0.45));
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+}
+
+#swich img {
+  width: auto;
+  height: 100%;
+}
+
+.ajusSet {
+    width: calc((var(--Apantalla) * 0.1));
+    height: calc((var(--Apantalla) * 0.08));
+    position: absolute;
+    top: calc((var(--Apantalla) * 0.29));
+    left: calc((var(--Apantalla) * 0.45));
+    line-height: calc((var(--Apantalla) * 0.05));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#ajusSet img {
+  width: auto;
+  height: 100%;
+}
+
+
+#ABox-Counter .counter {
+    position: absolute;
+    color: white;
+    font-size: calc(30vw); /* Ajusta el tamaño de fuente según el ancho de la pantalla */
+    font-weight: bold;
+    line-height: calc((var(--Apantalla) * 0.4));
+}
+
+#BBox-Counter .counter {
+    position: absolute;
+    color: white;
+    font-size: calc(30vw); /* Ajusta el tamaño de fuente según el ancho de la pantalla */
+    font-weight: bold;
+    line-height: calc((var(--Apantalla) * 0.4));
+}
+
+#ABox-Counter .counter.under-nine {
+    margin-left: calc((var(--Apantalla) * 0.11));
+}
+
+#BBox-Counter .counter.under-nine {
+    margin-left: calc((var(--Apantalla) * 0.11));
+}
+
+#ABox-Counter .counter.over-nine {
+    margin-left: calc((var(--Apantalla) * 0.02));
+}
+
+#BBox-Counter .counter.over-nine {
+    margin-left: calc((var(--Apantalla) * 0.02));
+}
+
+.configure {
+  width: calc((var(--Apantalla) * 0.4));
+  height: calc((var(--Apantalla) * 0.4));
+  background-color: #212121;
+  position: absolute;
+  left: calc((var(--Apantalla) * 0.3));
+  color: white; 
+  font-size: calc(var(--Apantalla) * 0.1); /* Ajusta el tamaño de fuente según el ancho de la pantalla */
+  font-weight: bold;
+  text-align: center;
+  top: 2vW;
+  visibility: hidden;
+}
+
+.puntos {
+  padding: 1%;
+  font-size: 2.7vw;
+}
+.puntos label {
+  margin-right: 1%; /* Espaciado entre el label y el input */
+}
+
+.puntos input {
+  font-family: 'Courier New', Courier, monospace;
+  background-color: transparent;
+  border: 0;
+  border-bottom: 2px #fff solid;
+  display: block;
+  width: 40%;
+  font-size: 3vw;
+  color: #fff;
+  margin: 0 auto;
+  text-align: center;
+}
+.techo {
+  padding: 1%;
+  font-size: 4vw;
+}
+.techo label {
+  margin-right: 1%; /* Espaciado entre el label y el input */
+}
+.techo input {
+  font-family: 'Courier New', Courier, monospace;
+  background-color: transparent;
+  border: 0;
+  border-bottom: 2px #fff solid;
+  display: block;
+  width: 30%;
+  font-size: 3vw;
+  color: #fff;
+  margin: 0 auto;
+  text-align: center;
+  margin-right: 15%;
+}
+
+button {
+  top: 0%;
+  background: #fbca1f;
+  font-family: inherit;
+  padding: 0.6em 1.3em;
+  font-weight: 900;
+  font-size: 3vw;
+  border: 3px solid black;
+  border-radius: 0.4em;
+  box-shadow: 0.1em 0.1em;
+  cursor: pointer;
+  position: absolute;
+  top: calc((var(--Apantalla) * 0.3));
+  left: calc((var(--Apantalla) * 0.1));
+}
+
+button:hover {
+  transform: translate(-0.05vw, -0.05vw);
+  box-shadow: 0.15em 0.15em;
+}
+
+button:active {
+  transform: translate(0.05em, 0.05em);
+  box-shadow: 0.05em 0.05em;
+}
+
+
+.animado {
+  animation: slideOut 0.5s forwards;
+}
+
+@keyframes slideOut {
+  from {
+      opacity: 0;
+      transform: translateX(1vw);
+  }
+  to {
+      opacity: 1;
+      transform: translateX(0);
+  }
+}

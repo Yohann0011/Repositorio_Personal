@@ -1,0 +1,706 @@
+/* Redes Sociales */
+
+.icon-bar {
+  position: fixed;
+  top: 88.5%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.icon-bar a {
+  display: block;
+  text-align: center;
+  padding: 10px;
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 3vh;
+}
+
+/* Style the social media icons with color, if you want */
+.icon-bar a:hover {
+  background-color: #000;
+  background: linear-gradient(to top,rgba(0,0,0,1),rgba(0,0,0,1));
+}
+
+.instagram {
+  background: linear-gradient(to top, rgba(254, 212, 46,1), rgba(254, 121, 34,1),rgba(251, 18, 106,1),rgba(207, 28, 193,1),rgba(117, 66, 245,1));
+  color: white;
+}
+
+.facebook {
+  background: linear-gradient(to top, rgba(10, 100, 225,1), rgba(23, 175, 251,1));
+  color: white;
+}
+
+
+.tiktok {
+  background: linear-gradient(to top,rgba(254, 47, 93,1),rgba(49, 241, 235,1));
+  color: white;
+}
+
+.youtube {
+  background: #bb0000;
+  color: white;
+}
+
+/* Inicio carrusel */
+
+.carrusel {
+  width: 100;
+  height: fit-content;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+}
+
+.carrusel img {
+  max-height: 55vh;
+  width: auto;
+  object-fit: cover;
+}
+
+ @keyframes slide {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+} 
+
+.imagenes {
+  display: flex;
+  width: calc(100%*16);
+  animation: slide 50s linear infinite;
+  
+}
+
+.imagenes img {
+  flex: 0 0 auto;
+} */
+
+
+/* Fin carrusel */
+
+/* Inicio utilidades */
+
+.utilidades{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding-top: 3vh;
+  padding-bottom: 3vh;
+  justify-content: center;
+  align-items: center;
+  background: #252525;
+  color: #f0f0f0;
+}
+
+h2 {
+  margin-top: 0;
+  font-size: 7vw;
+  margin-bottom: 1vh;
+}
+
+.tarjetas{
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tarjeta {
+  font-family: 'Gabarito', sans-serif;
+  width: 25vw;
+  height: 25vh;
+  margin: 1vw;
+  border-radius: 25px;
+  background-color: #f0f0f0;
+  color: black;
+  font-size: 3vw;
+  font-weight: bold;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+}
+
+.tarjeta:hover {
+  color: white;
+  background-color: #ffa90f;
+}
+
+/* Fin utilidades */
+
+/* Inicio ubicaciones*/
+
+.ubicaciones{
+  display: flex;
+  flex-direction: column;
+  width: 100;
+  height: auto;
+  margin: 0;
+  padding-top: 3vh;
+  padding-bottom: 3vh;
+  justify-content: center;
+  align-items: center;
+  background: #f0f0f0;
+  color: #303030;
+}
+
+.mapas{
+  color: #f0f0f0;
+  display: flex;
+  gap: 2vw;
+  justify-content: center;
+  width: 100;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.mapa {
+  width: 35vw;
+  height: 40vh;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  border: 1px solid #ddd;
+}
+
+.mapa iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* Fin ubicaciones *//* Redes Sociales */
+
+.icon-bar {
+  position: fixed;
+  top: 88.5%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.icon-bar a {
+  display: block;
+  text-align: center;
+  padding: 10px;
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 3vh;
+}
+
+/* Style the social media icons with color, if you want */
+.icon-bar a:hover {
+  background-color: #000;
+  background: linear-gradient(to top,rgba(0,0,0,1),rgba(0,0,0,1));
+}
+
+.instagram {
+  background: linear-gradient(to top, rgba(254, 212, 46,1), rgba(254, 121, 34,1),rgba(251, 18, 106,1),rgba(207, 28, 193,1),rgba(117, 66, 245,1));
+  color: white;
+}
+
+.facebook {
+  background: linear-gradient(to top, rgba(10, 100, 225,1), rgba(23, 175, 251,1));
+  color: white;
+}
+
+
+.tiktok {
+  background: linear-gradient(to top,rgba(254, 47, 93,1),rgba(49, 241, 235,1));
+  color: white;
+}
+
+.youtube {
+  background: #bb0000;
+  color: white;
+}
+
+/* Inicio carrusel */
+
+.carrusel {
+  width: 100;
+  height: fit-content;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+}
+
+.carrusel img {
+  max-height: 55vh;
+  width: auto;
+  object-fit: cover;
+}
+
+@keyframes slide {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.imagenes {
+  display: flex;
+  width: calc(100%*16);
+  animation: slide 50s linear infinite;
+  
+}
+
+.imagenes img {
+  flex: 0 0 auto;
+}
+
+/* Fin carrusel */
+
+/* Inicio utilidades */
+
+.utilidades{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding-top: 3vh;
+  padding-bottom: 3vh;
+  justify-content: center;
+  align-items: center;
+  background: #252525;
+  color: #f0f0f0;
+}
+
+h2 {
+  margin-top: 0;
+  font-size: 7vw;
+  margin-bottom: 1vh;
+}
+
+.tarjetas{
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tarjeta {
+  font-family: 'Gabarito', sans-serif;
+  width: 25vw;
+  height: 25vh;
+  margin: 1vw;
+  border-radius: 25px;
+  background-color: #f0f0f0;
+  color: black;
+  font-size: 3vw;
+  font-weight: bold;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+}
+
+.tarjeta:hover {
+  color: white;
+  background-color: #ffa90f;
+}
+
+/* Fin utilidades */
+
+/* Inicio ubicaciones*/
+
+.ubicaciones{
+  display: flex;
+  flex-direction: column;
+  width: 100;
+  height: auto;
+  margin: 0;
+  padding-top: 3vh;
+  padding-bottom: 3vh;
+  justify-content: center;
+  align-items: center;
+  background: #f0f0f0;
+  color: #303030;
+}
+
+.mapas{
+  color: #f0f0f0;
+  display: flex;
+  gap: 2vw;
+  justify-content: center;
+  width: 100;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.mapa {
+  width: 35vw;
+  height: 40vh;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  border: 1px solid #ddd;
+}
+
+.mapa iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* Fin ubicaciones *//* Redes Sociales */
+
+.icon-bar {
+  position: fixed;
+  top: 88.5%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.icon-bar a {
+  display: block;
+  text-align: center;
+  padding: 10px;
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 3vh;
+}
+
+/* Style the social media icons with color, if you want */
+.icon-bar a:hover {
+  background-color: #000;
+  background: linear-gradient(to top,rgba(0,0,0,1),rgba(0,0,0,1));
+}
+
+.instagram {
+  background: linear-gradient(to top, rgba(254, 212, 46,1), rgba(254, 121, 34,1),rgba(251, 18, 106,1),rgba(207, 28, 193,1),rgba(117, 66, 245,1));
+  color: white;
+}
+
+.facebook {
+  background: linear-gradient(to top, rgba(10, 100, 225,1), rgba(23, 175, 251,1));
+  color: white;
+}
+
+
+.tiktok {
+  background: linear-gradient(to top,rgba(254, 47, 93,1),rgba(49, 241, 235,1));
+  color: white;
+}
+
+.youtube {
+  background: #bb0000;
+  color: white;
+}
+
+/* Inicio carrusel */
+
+.carrusel {
+  width: 100;
+  height: fit-content;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+}
+
+.carrusel img {
+  max-height: 55vh;
+  width: auto;
+  object-fit: cover;
+}
+
+@keyframes slide {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.imagenes {
+  display: flex;
+  width: calc(100%*16);
+  animation: slide 50s linear infinite;
+  
+}
+
+.imagenes img {
+  flex: 0 0 auto;
+}
+
+/* Fin carrusel */
+
+/* Inicio utilidades */
+
+.utilidades{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding-top: 3vh;
+  padding-bottom: 3vh;
+  justify-content: center;
+  align-items: center;
+  background: #252525;
+  color: #f0f0f0;
+}
+
+h2 {
+  margin-top: 0;
+  font-size: 7vw;
+  margin-bottom: 1vh;
+}
+
+.tarjetas{
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tarjeta {
+  font-family: 'Gabarito', sans-serif;
+  width: 25vw;
+  height: 25vh;
+  margin: 1vw;
+  border-radius: 25px;
+  background-color: #f0f0f0;
+  color: black;
+  font-size: 3vw;
+  font-weight: bold;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+}
+
+.tarjeta:hover {
+  color: white;
+  background-color: #ffa90f;
+}
+
+/* Fin utilidades */
+
+/* Inicio ubicaciones*/
+
+.ubicaciones{
+  display: flex;
+  flex-direction: column;
+  width: 100;
+  height: auto;
+  margin: 0;
+  padding-top: 3vh;
+  padding-bottom: 3vh;
+  justify-content: center;
+  align-items: center;
+  background: #f0f0f0;
+  color: #303030;
+}
+
+.mapas{
+  color: #f0f0f0;
+  display: flex;
+  gap: 2vw;
+  justify-content: center;
+  width: 100;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.mapa {
+  width: 35vw;
+  height: 40vh;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  border: 1px solid #ddd;
+}
+
+.mapa iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* Fin ubicaciones *//* Redes Sociales */
+
+.icon-bar {
+  position: fixed;
+  top: 88.5%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.icon-bar a {
+  display: block;
+  text-align: center;
+  padding: 10px;
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 3vh;
+}
+
+/* Style the social media icons with color, if you want */
+.icon-bar a:hover {
+  background-color: #000;
+  background: linear-gradient(to top,rgba(0,0,0,1),rgba(0,0,0,1));
+}
+
+.instagram {
+  background: linear-gradient(to top, rgba(254, 212, 46,1), rgba(254, 121, 34,1),rgba(251, 18, 106,1),rgba(207, 28, 193,1),rgba(117, 66, 245,1));
+  color: white;
+}
+
+.facebook {
+  background: linear-gradient(to top, rgba(10, 100, 225,1), rgba(23, 175, 251,1));
+  color: white;
+}
+
+
+.tiktok {
+  background: linear-gradient(to top,rgba(254, 47, 93,1),rgba(49, 241, 235,1));
+  color: white;
+}
+
+.youtube {
+  background: #bb0000;
+  color: white;
+}
+
+/* Inicio carrusel */
+
+.carrusel {
+  width: 100;
+  height: fit-content;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+}
+
+.carrusel img {
+  max-height: 55vh;
+  width: auto;
+  object-fit: cover;
+}
+
+@keyframes slide {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.imagenes {
+  display: flex;
+  width: calc(100%*16);
+  animation: slide 50s linear infinite;
+  
+}
+
+.imagenes img {
+  flex: 0 0 auto;
+}
+
+/* Fin carrusel */
+
+/* Inicio utilidades */
+
+.utilidades{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding-top: 3vh;
+  padding-bottom: 3vh;
+  justify-content: center;
+  align-items: center;
+  background: #252525;
+  color: #f0f0f0;
+}
+
+h2 {
+  margin-top: 0;
+  font-size: 7vw;
+  margin-bottom: 1vh;
+}
+
+.tarjetas{
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tarjeta {
+  font-family: 'Gabarito', sans-serif;
+  width: 25vw;
+  height: 25vh;
+  margin: 1vw;
+  border-radius: 25px;
+  background-color: #f0f0f0;
+  color: black;
+  font-size: 3vw;
+  font-weight: bold;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+}
+
+.tarjeta:hover {
+  color: white;
+  background-color: #ffa90f;
+}
+
+/* Fin utilidades */
+
+/* Inicio ubicaciones*/
+
+.ubicaciones{
+  display: flex;
+  flex-direction: column;
+  width: 100;
+  height: auto;
+  margin: 0;
+  padding-top: 3vh;
+  padding-bottom: 3vh;
+  justify-content: center;
+  align-items: center;
+  background: #f0f0f0;
+  color: #303030;
+}
+
+.mapas{
+  color: #f0f0f0;
+  display: flex;
+  gap: 2vw;
+  justify-content: center;
+  width: 100;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.mapa {
+  width: 35vw;
+  height: 40vh;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  border: 1px solid #ddd;
+}
+
+.mapa iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* Fin ubicaciones */

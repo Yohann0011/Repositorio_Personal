@@ -1,3 +1,4 @@
+
 body {
     user-select: none;
     background-color: #303030; 
@@ -200,10 +201,12 @@ body {
   font-size: calc(var(--Apantalla) * 0.1); /* Ajusta el tamaño de fuente según el ancho de la pantalla */
   font-weight: bold;
   text-align: center;
-  top: 2vW;
+  top: 3vh;
   visibility: hidden;
 }
-
+#in1{
+  margin-top: 2vh;
+}
 .puntos {
   padding: 1%;
   font-size: 2.7vw;

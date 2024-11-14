@@ -1,0 +1,32 @@
+/* Estilos para móviles */
+@media (max-width: 768px) {
+  .carrusel img {
+    max-height: 30vh;
+  }
+
+  h2 {
+    margin-top: 0;
+    font-size: 12vw;
+    margin-bottom: 1vh;
+    text-align: center;
+  }
+  
+  .tarjetas{
+    flex-direction: column;
+  }
+  .tarjeta {
+    width: 60vw;
+    height: 8vh;
+    font-size: 6vw;
+  }
+  
+  .mapas {
+    flex-direction: column;
+    gap: 3vh;
+  }
+  
+  .mapa {
+    width: 70vw;
+    height: 30vh;
+  }
+}

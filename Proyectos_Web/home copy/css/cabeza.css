@@ -1,0 +1,146 @@
+body {
+  margin: 0;
+  padding: 0;
+  width: auto;
+  height: auto;
+  background:#303030;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: medium;
+}
+
+/* Inicio Elemento Header */
+#main-header {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 10vh;
+  background: rgba(0,0,0,1);
+  /* background: linear-gradient(to bottom, rgba(0,0,0,1),rgba(0,0,0,1)); */
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+#main-header a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Logo */
+#logo-header {
+  display: flex;
+  position: relative;
+  align-items: center;
+  margin: 20px;
+}
+
+#logo-header img {
+  display: block;
+  align-content: left;
+  width: auto;
+  max-height: 8vh;
+}
+
+/* Navegación */
+
+
+ul, ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+nav ul {
+  display: flex;
+  gap: 1em;
+}
+
+nav ul li {
+  display: inline-block;
+}
+
+nav ul li a {
+  text-decoration: none;
+  padding: 0.5em 1em;
+}
+
+nav ul li a:hover {
+  background: #404040;
+  border-radius: 20px;
+}
+
+/* Botón de menú para móviles */
+#menu-toggle {
+  display: none;
+}
+
+.menu-icon {
+  display: none;
+  font-size: 2em;
+  cursor: pointer;
+}
+
+/* Media Queries para diseño responsivo */
+@media (max-width: 768px) {
+  body{
+  font-size: small;
+  }
+
+  #main-header {
+    flex-direction: row;
+    height: 5vh;
+    padding: 1em;
+    justify-content:space-evenly;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  #logo-header {
+    margin-bottom: 1em;
+  }
+
+  #logo-header img{
+    max-height: 6vh;
+  }
+    
+  .menu-icon {
+    display: block;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 0px;
+    display: none; /* Escondemos el menú inicialmente */
+  }
+
+  #menu-toggle:checked + .menu-icon + nav ul {
+    display: flex;
+  }
+
+  nav ul li {
+    display: block;
+  }
+
+  nav ul li a {
+    display: block;
+    width: 100%;
+    text-align: center;
+    background: #000;
+  }
+  nav ul li a:hover {
+    border-radius: 0px;
+  }
+}

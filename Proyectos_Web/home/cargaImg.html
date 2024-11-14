@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="stylesheet" type="text/css" href="css/carga-img.css"> <!-- Nuevo archivo CSS -->
+
+    <script src="js/loadImgs.js"></script>
+    <script src="js/uploadImg.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&family=Syne:wght@400..800&display=swap" rel="stylesheet">
+
+    <title>Gestionar Imágenes</title>
+</head>
+<body>
+    <main>
+        <h1>Gestión de Imágenes del Carrusel</h1>
+        <!-- 
+                <!-- Formulario para subir nuevas imágenes
+        <form id="uploadForm" enctype="multipart/form-data">
+            <label for="fileInput">Selecciona una imagen para subir:</label>
+            <input type="file" id="fileInput" name="file">
+            <button type="submit">Subir Imagen</button>
+        </form>
+        -->
+
+        <!-- Contenedor para mostrar imágenes existentes y formularios de actualización -->
+        <div id="image-container"></div>
+    </main>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+    fetch('php/loadImg.php')
+        .then(response => response.json())
+        .then(data => {
+            const imageContainer = document.getElementById('image-container');
+            imageContainer.innerHTML = ''; // Limpiar el contenedor antes de agregar imágenes
+            
+            data.urls.forEach((url, index) => {
+                const imageItem = document.createElement('div');
+                imageItem.className = 'image-item';
+                
+                const img = document.createElement('img');
+                img.src = url;
+                img.alt = "Imagen del servidor";
+                
+                img.onload = () => {
+                    img.style.display = 'block';
+                };
+                
+                img.onerror = () => {
+                    img.style.display = 'none';
+                    console.error('Error al cargar la imagen:', url);
+                };
+
+                const fileInput = document.createElement('input');
+                fileInput.type = 'file';
+                fileInput.name = 'file';
+                fileInput.dataset.index = index; // Guardar el índice de la imagen en un atributo data
+
+                const uploadButton = document.createElement('button');
+                uploadButton.textContent = 'Actualizar';
+                uploadButton.onclick = function() {
+                    const file = fileInput.files[0];
+                    if (file) {
+                        const formData = new FormData();
+                        formData.append('file', file);
+                        formData.append('index', index);
+
+                        fetch('php/update_image.php', {
+                            method: 'POST',
+                            body: formData
+                        })
+                        .then(response => response.text())
+                        .then(result => {
+                            alert(result);
+                            img.src = URL.createObjectURL(file); // Actualizar imagen en la página
+                        })
+                        .catch(error => {
+                            console.error('Error:', error);
+                        });
+                    } else {
+                        alert('Por favor, selecciona una imagen para actualizar.');
+                    }
+                };
+
+                imageItem.appendChild(img);
+                imageItem.appendChild(fileInput);
+                imageItem.appendChild(uploadButton);
+
+                imageContainer.appendChild(imageItem);
+            });
+        })
+        .catch(error => {
+            console.error('Error al cargar las imágenes:', error);
+        });
+});
+    </script>
+</body>
+</html>

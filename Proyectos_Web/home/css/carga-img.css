@@ -1,0 +1,46 @@
+/* Estilo general del contenedor */
+#image-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Espacio entre imágenes */
+    justify-content: center;
+    margin: 20px;
+}
+
+/* Estilo de cada imagen */
+.image-item {
+    flex: 0 1 calc(50% - 10px); /* 2 columnas con un espacio entre ellas */
+    box-sizing: border-box;
+    position: relative;
+    max-width: 100%; /* No exceder el ancho del contenedor */
+}
+
+/* Estilo de la imagen */
+.image-item img {
+    width: 100%; /* Ancho completo del contenedor */
+    height: auto; /* Mantener la relación de aspecto */
+    max-height: 20vh; /* Alto máximo de la imagen */
+    object-fit: cover; /* Ajustar la imagen para que cubra el contenedor */
+    border: 1px solid #ddd; /* Borde opcional */
+    border-radius: 8px; /* Bordes redondeados opcionales */
+}
+
+/* Estilo del formulario y botones */
+form {
+    margin: 20px;
+    text-align: center;
+}
+
+button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #007bff; /* Color de fondo del botón */
+    color: #fff; /* Color del texto del botón */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3; /* Color de fondo del botón al pasar el ratón */
+}

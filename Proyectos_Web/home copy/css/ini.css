@@ -1,0 +1,113 @@
+.icon-bar {
+  position: fixed;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+/* Style the icon bar links */
+.icon-bar a {
+  display: block;
+  text-align: center;
+  padding: 10px;
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 3vh;
+}
+
+/* Style the social media icons with color, if you want */
+.icon-bar a:hover {
+  background-color: #000;
+  background: linear-gradient(to top,rgba(0,0,0,1),rgba(0,0,0,1));
+}
+
+.instagram {
+  background: linear-gradient(to top, rgba(254, 212, 46,1), rgba(254, 121, 34,1),rgba(251, 18, 106,1),rgba(207, 28, 193,1),rgba(117, 66, 245,1));
+  color: white;
+}
+
+.facebook {
+  background: linear-gradient(to top, rgba(10, 100, 225,1), rgba(23, 175, 251,1));
+  color: white;
+}
+
+
+.tiktok {
+  background: linear-gradient(to top,rgba(254, 47, 93,1),rgba(49, 241, 235,1));
+  color: white;
+}
+
+.youtube {
+  background: #bb0000;
+  color: white;
+}
+
+/*
+* Inicio Elemento Carrusel *
+*/
+.slider {
+    width: 100;
+    height: fit-content;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    margin-top: 10vh;
+}
+
+.slider img {
+    max-height: 55vh;
+    width: auto;
+    object-fit: cover;
+}
+
+@keyframes slide {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+.slides {
+    display: flex;
+    width: calc(100%*16);
+    animation: slide 50s linear infinite;
+    
+}
+
+.slides img {
+    flex: 0 0 auto;
+}
+
+/*
+* Fin Carrusel *
+*/
+
+
+
+
+.utilidades{
+  position: relative;
+  width: 100;
+  height: 30vh;
+  background: #f0f0f0
+}
+
+
+@media (max-width: 768px) {
+
+  .slider {
+    margin-top: 8vh;
+    margin-bottom: 0%;
+  }
+
+  .slider img {
+    max-height: 40vh;
+    width: auto;
+    object-fit: cover;
+}
+
+  .slides {
+    display: flex;
+    width: calc(100%*16);
+    animation: slide 60s linear infinite;
+}
+}

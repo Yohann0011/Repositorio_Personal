@@ -1,0 +1,74 @@
+body {
+  width: 100;
+  height: 100;
+  background: linear-gradient(-45deg, #000000, #707070, #000000);
+  background-size: 500% 500%;
+  animation: gradient 5s ease infinite;
+  overflow: hidden; 
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.logo{
+  width: 100;
+  height: 40;
+  display: flex;
+  justify-content: center;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.logo img{
+  width: 40%;
+  height: 40%;
+  justify-content: center;
+}
+
+.contenedor {
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: transparent;
+}
+.caja {
+  width: 70%;
+  display: flex;
+  flex-direction:row;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-grow: 1;
+  height: auto;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 20px;
+  border-style: solid;
+  text-decoration: none;
+  margin: 1.5%;
+  border-radius: 30px;
+}
+
+.caja img{
+  max-height: 6vh;
+  max-width: auto;
+  margin-right: 5%;
+}
+
+.caja span{
+  font-family: cursive;
+  font-weight: bold;
+  font-size: 150%;
+}
+

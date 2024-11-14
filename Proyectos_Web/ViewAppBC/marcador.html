@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Marcador</title>
+    <link rel="stylesheet" type="text/css" href="css/res.css">
+</head>
+<body>
+    <div class="container">
+        <div id="ABox-Counter" class="countA-box" onclick="masA()">
+            <div id="A-counter" class="counter">0</div>
+        </div>
+        <div id="Aset-counter" class="setA-box">0</div>
+        <div id="Bset-counter" class="setB-box">0</div>
+        <div id="BBox-Counter" class="countB-box" onclick="masB()">
+            <div id="B-counter" class="counter">0</div>
+        </div>
+        <div id="reiniciar" class="re" onclick="reT()">
+            <img src="img/Utilidades/reiniciar.png" alt="reiniciar">
+        </div>
+        <div id="min1" class="countmin1-box" onclick="disA()">-</div>
+        <div id="time1" class="timeA1-box" onclick="timeA()">2 TIEMPOS</div>
+        <div id="min2" class="countmin2-box" onclick="disB()">-</div>
+        <div id="time2" class="timeA2-box" onclick="timeB()">2 TIEMPOS</div>
+        <div id="swich" class="cambio" onclick="cambio()">
+            <img src="img/Utilidades/cambio.png" alt="cambio">
+        </div>
+        <div id="ajusSet" class="ajusSet" onclick="verAjus()">
+            <img src="img/Utilidades/ajustes.png" alt="ajustes">
+        </div>
+
+        <div id="config" class="configure">
+            <div id="in1" class="puntos">
+                <label>
+                    <span style="transition-delay:0ms">P</span>
+                    <span style="transition-delay:50ms">U</span>
+                    <span style="transition-delay:100ms">N</span>
+                    <span style="transition-delay:150ms">T</span>
+                    <span style="transition-delay:200ms">O</span>
+                    <span style="transition-delay:250ms">S</span>
+                </label><br>
+                <input id="cPuntos" type="value" value="25" required>
+            </div>
+
+            <div id="in2" class="puntos">
+                <label>
+                    <span style="transition-delay:0ms">S</span>
+                    <span style="transition-delay:50ms">E</span>
+                    <span style="transition-delay:100ms">T</span>
+                    <span style="transition-delay:150ms">S</span>
+                </label><br>
+                <input id="cSets" type="value" value="2" required>
+            </div>
+
+            <div id="in3" class="puntos">
+                <label>
+                    <span style="transition-delay:0ms">A</span>
+                    <span style="transition-delay:50ms">L</span>
+                    <span style="transition-delay:100ms">A</span>
+                    <span style="transition-delay:150ms">R</span>
+                    <span style="transition-delay:200ms">G</span>
+                    <span style="transition-delay:250ms">U</span>
+                    <span style="transition-delay:300ms">E</span>
+                </label><br>
+                <div id="vali" class="vali" onclick="alargue()">SI</div>
+            </div>
+
+            <button id="gBut" onclick="oculAjus()">APLICAR</button>
+        </div>
+
+    </div>
+    
+    <script>
+        // Obtener el elemento de entrada
+        var cPuntos = document.getElementById("cPuntos");
+    
+        // Agregar un controlador de eventos para el evento 'click'
+        cPuntos.addEventListener("click", function() {
+            // Borrar el texto
+            this.value = "";
+        });
+
+        var cSets = document.getElementById("cSets");
+        cSets.addEventListener("click", function() {
+            this.value = "";
+        });
+    </script>
+    <script src="js/logica.js"></script>
+</body>
+</html>
