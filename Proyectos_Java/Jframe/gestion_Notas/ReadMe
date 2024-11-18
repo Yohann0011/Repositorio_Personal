@@ -1,7 +1,13 @@
 Realizar un video en el cual explique el proceso de elaboración del siguiente programa:
 
-Software de gestión de notas: Debe ser capaz de capturar N calificaciones y poder otorgarles diferentes porcentajes que dependeran del tipo del trabajo.
+Software de gestión de notas: 
+
+*Debe ser capaz de capturar N calificaciones
+*Otorgarles diferentes porcentajes que dependeran del tipo del trabajo.
 
 Ejemplo: 
 
-Parcial 20%, Laboratorios 15%, Talleres 10%, etc
+-Parcial 20% 
+-Laboratorios 15% 
+-Talleres 10% 
+-etc

@@ -1,43 +1,56 @@
 package gestion_Notas;
 
-import java.awt.Color;
+import java.util.ArrayList;
+import java.util.Scanner;
+import java.io.IOException;
 
-//librería de interfaz swing.JFrame
-import javax.swing.JFrame;
-import javax.swing.JPanel;
+public class Software {
 
-//Realizar herencia de la clase Jframe con = extends JFrame
-public class Software extends JFrame{
-
-    //Clase Principal
     public static void main(String[] args) {
-        //Instanciamos la Ventana
-        Software v1 = new Software();
-        //Hacemos visible la ventana
-        v1.setVisible(true);
-    }
 
-    //constructor - ventana
-    public Software(){
-        //Establecemos el tamaño de la ventana tamaño de la ventana
-        this.setSize(640, 480);
-        //finalizar el proceso al clicar en cerrar
-        this.setDefaultCloseOperation(EXIT_ON_CLOSE);
-        // Titulo de ventana
-        this.setTitle("Gestión de Notas");
-        //Posición de la ventana - Centrar la ventana
-        this.setLocationRelativeTo(this);
-        //Llamar a Elementos
-        elementos();
-    }
+        Scanner teclado = new Scanner(System.in);
+        // contar la cantidad de notas
+        int tn = 0,c = 0;
+        String n;
+        double promedio = 0, suma = 0;
 
-    private void elementos(){
-        JPanel fondo = new JPanel();
-        //Establecer color de Fondo
-        fondo.setBackground(Color.DARK_GRAY);
-        //Agregar el panel
-        this.getContentPane().add(fondo);
+        ArrayList<String> notas = new ArrayList<>();
         
+        do{
+        
+        // Limpiar consola
+        try {
+            if (System.getProperty("os.name").contains("Windows")) {
+                new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
+            } else {
+                new ProcessBuilder("clear").inheritIO().start().waitFor();
+            }
+        } catch (IOException | InterruptedException ex) {
+            System.out.println("Error al limpiar la consola: " + ex.getMessage());
+        }    
+
+
+        // agregar notas al digitar
+        System.out.println("Ingrese una calificacion o presione e para terminar el proceso"); // label
+        n = teclado.next(); // input
+
+        // Evitar agregar la e
+        if(!n.equals("e")){
+        notas.add(n);
+        c=c++;
+        }
+
+        }while(!n.equals("e"));
+        
+        // Obtenemos la cantidad de notas ingresadas
+        tn = notas.size();
+        // Recorrer el arraylist y sumar las notas obtenidas
+        for(int i = 0; i < tn ;i ++){
+            suma += Double.parseDouble(notas.get(i));
+        }
+
+        // sacar el promedio
+        promedio = suma/tn;
+        System.out.println(promedio);
     }
 }
-
